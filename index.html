@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A copycat of https://rectangles.app">
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon-180x180.png">
+  <link rel="stylesheet" href="style.css">
+  <title>Time Tiles</title>
+</head>
+<body>
+  <main class="flex justify-around flex-warp">
+    <div class="grid-container"></div>
+    <div class="text-container">
+      <h1 class="border-b-3">Time Tiles</h1>
+      <p>There are 144 rectangles</p>
+      <p>Each rectangle represent 10 minutes of your day</p>
+      <div class="flex align-center gap-10">
+        <div class="grid-item grid-time-passed"></div> 
+        <p>Time that has already passed today</p>
+      </div>
+      <div class="flex align-center gap-10">
+        <div class="grid-item"></div> 
+        <p>Time that you still have left today</p>
+      </div>
+      <p>What you can do everyday: (<strong>hover</strong> on each item)</p>
+      <ul class="border-b-3">
+        <li class="js-hover" data-hours="7" title="7 hours">Sleeping 7 hours</li>
+        <li class="js-hover" data-hours="8" title="8 hours">Working 8 hours</li>
+        <li class="js-hover" data-hours="1" title="1 hour">Exercise for 1 hour</li>
+      </ul>
+      <div class="flex">
+        <a title="fullscreen mode" href="?full_screen=true">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="30" height="30"><path fill="none" d="M0 0h24v24H0z"/><path d="M20 3h2v6h-2V5h-4V3h4zM4 3h4v2H4v4H2V3h2zm16 16v-4h2v6h-6v-2h4zM4 19h4v2H2v-6h2v4z"/></svg>
+        </a>
+      </div>
+    </div>
+  </main>
+  <div class="return-container">
+    <a href="/" title="Go back">Go back</a>
+  </div>
+  <script src="./script.js"></script>
+</body>
+</html>
