@@ -32,13 +32,15 @@ server.on('request', async (req, res) => {
   try {
     content = await fsPromise.readFile(filePath)
   } catch {
-    console.log(`${new Date().toLocaleTimeString()}: An error occurred when reading request from ${url.toString()}`)
+    console.log(`${new Date().toLocaleTimeString()}: An error occurred when reading request from ${url.toString()}`);
+    console.log(`from agent: ${ req.headers?.["user-agent"] }`);
     return;
   }
   res.write(content)
   res.end()
 })
 
-server.listen(80, () => {
-  console.log('start listening');
+let port = 8080
+server.listen(port, () => {
+  console.log('start listening on port ' + port);
 })

@@ -64,6 +64,7 @@ li:hover {
   width: var(--grid-length);
   border: .3rem solid var(--gray);
   border-radius: .5rem;
+  transition: 0.5s;
 }
 
 .grid-time-passed {
